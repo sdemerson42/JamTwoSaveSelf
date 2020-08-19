@@ -44,3 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 3660853711
     locked: 0
+  - name: Floor
+    uniqueID: 2252692633
+    locked: 0
+  - name: Items and Walls
+    uniqueID: 4255389909
+    locked: 0
+  - name: Units
+    uniqueID: 22383821
+    locked: 0

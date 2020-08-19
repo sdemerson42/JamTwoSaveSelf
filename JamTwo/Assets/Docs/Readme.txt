@@ -1,0 +1,1 @@
+All project documents relevant to the final jam build should go in this folder.
