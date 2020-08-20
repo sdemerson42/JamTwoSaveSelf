@@ -26,6 +26,7 @@ public class GuardBehavior : MonoBehaviour
 
     Rigidbody2D m_rigidBody;
     Animator m_animator;
+    WordBalloon m_wordBalloon;
 
     GuardStates m_behaviorState;
     int m_patrolPointIndex;
@@ -35,6 +36,7 @@ public class GuardBehavior : MonoBehaviour
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
+        m_wordBalloon = GetComponentInChildren<WordBalloon>();
 
         // Initialize behavior
 
@@ -66,6 +68,11 @@ public class GuardBehavior : MonoBehaviour
                 // Wait for specified amount of time, then set new destination
                 m_animator.SetBool("isWalking", false);
                 m_rigidBody.velocity = Vector2.zero;
+
+                // TEMP CODE
+                m_wordBalloon.Speak("Everyone finds us so intimidating. Nobody ever says, \"Wow, nice gun!\"");
+                // END TEMP
+
                 yield return new WaitForSeconds(patrolPoints[m_patrolPointIndex].waitTime);
 
                 m_patrolPointIndex = (m_patrolPointIndex + 1) % patrolPoints.Length;
