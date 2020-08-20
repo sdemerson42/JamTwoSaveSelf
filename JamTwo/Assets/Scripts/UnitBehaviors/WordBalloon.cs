@@ -9,15 +9,15 @@ public class WordBalloon : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject textObject;
-    public GameObject panelObject;
-
+   
     Text m_text;
+    Animator m_animator;
     const float m_visibleTime = 4.5f;
 
     void Awake()
     {
         m_text = textObject.GetComponent<Text>();
-        Debug.Log(m_text);
+        m_animator = GetComponent<Animator>();
     }
 
     public void Speak(string message)
@@ -27,12 +27,10 @@ public class WordBalloon : MonoBehaviour
 
     IEnumerator DisplayText(string message)
     {
-        textObject.SetActive(true);
-        panelObject.SetActive(true);
+        m_animator.SetTrigger("appear");
         m_text.text = message;
         yield return new WaitForSeconds(m_visibleTime);
-        textObject.SetActive(false);
-        panelObject.SetActive(false);
+        m_animator.SetTrigger("disappear");
     }
     
 }
