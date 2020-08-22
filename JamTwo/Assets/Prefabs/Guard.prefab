@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6300501759198544431}
   - component: {fileID: 6300501759198544428}
   - component: {fileID: 6300501759198544429}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
     waitTime: 3
   - transform: {fileID: 0}
     waitTime: 1.5
+  maxSightDistance: 0
 --- !u!1001 &3452548818923378547
 PrefabInstance:
   m_ObjectHideFlags: 0

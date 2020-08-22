@@ -19,6 +19,8 @@ public class GuardBehavior : MonoBehaviour
     public float patrolSpeed;
     public PatrolData[] patrolPoints;
 
+    public float maxSightDistance;
+
     public enum GuardStates
     {
         Patrol
@@ -90,5 +92,26 @@ public class GuardBehavior : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void LookAtNoise(GameObject noise)
+    {
+        var noisePosition = noise.transform.position;
+        var direction = noisePosition - transform.position;
+        int mask = LayerMask.GetMask("Mapwalls");
+        float distance = Mathf.Min(maxSightDistance, Vector3.Distance(
+            noisePosition, transform.position));
+        var result = Physics2D.Raycast(transform.position, direction, distance, mask);
+
+        // Exit immediately if ray hits a wall.
+        if (result) return;
+
+        // TEST CODE
+
+        GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f);
+        Debug.Log($"Oh no! I see {noise.transform.parent.tag}!!");
+
+        // END TEST
+
     }
 }
