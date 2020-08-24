@@ -33,16 +33,32 @@ public class GuardBehavior : MonoBehaviour
     GuardStates m_behaviorState;
     int m_patrolPointIndex;
     const float m_turningDistance = .1f;
+    Vector3 m_balloonOffset;
 
     private void Awake()
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
-        m_wordBalloon = GetComponentInChildren<WordBalloon>();
+        m_wordBalloon = transform.parent.GetComponentInChildren<WordBalloon>();
+
+        // Calculate starting values
+
+        m_balloonOffset = m_wordBalloon.transform.position - transform.position;
 
         // Initialize behavior
 
         SetBehaviorState(GuardStates.Patrol);
+    }
+
+    private void Update()
+    {
+        SetWordBalloonPosition();
+    }
+
+    void SetWordBalloonPosition()
+    {
+        m_wordBalloon.transform.position =
+            transform.position + m_balloonOffset;
     }
 
     public void SetBehaviorState(GuardStates state)
@@ -89,6 +105,12 @@ public class GuardBehavior : MonoBehaviour
             var moveVector = (destination - transform.position).normalized *
                 patrolSpeed;
             m_rigidBody.velocity = moveVector;
+
+            var scale = transform.localScale;
+            float absX = Mathf.Abs(scale.x);
+            if (moveVector.x < 0f) scale.x = absX * -1f;
+            else if (moveVector.x > 0f) scale.x = absX;
+            transform.localScale = scale;
 
             yield return null;
         }

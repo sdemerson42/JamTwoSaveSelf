@@ -34,6 +34,13 @@ public class ZombieBehavior : MonoBehaviour
             var direction = CalculateNewWalkDirection();
             float walkTime = Random.Range(minSecondsToWalk, maxSecondsToWalk);
             m_rigidBody.velocity = direction.normalized * walkSpeed;
+
+            var scale = transform.localScale;
+            float absX = Mathf.Abs(scale.x);
+            if (direction.x < 0f) scale.x = absX * -1f;
+            else if (direction.x > 0f) scale.x = absX;
+            transform.localScale = scale;
+
             yield return new WaitForSeconds(walkTime);
         }
     }
