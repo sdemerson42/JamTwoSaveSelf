@@ -13,6 +13,7 @@ public class WordBalloon : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject textObject;
+    public Color balloonColor;
    
     Text m_text;
     Animator m_animator;
@@ -20,10 +21,28 @@ public class WordBalloon : MonoBehaviour
 
     bool m_isVisible = false;
 
+    Vector3 m_characterOffset;
+    Transform m_characterBodyTransform;
+
     void Awake()
     {
         m_text = textObject.GetComponent<Text>();
         m_animator = GetComponent<Animator>();
+
+        m_characterBodyTransform = transform.parent.GetChild(0);
+        m_characterOffset = transform.position - m_characterBodyTransform.position;
+
+        GetComponentInChildren<UnityEngine.UI.Image>().color = balloonColor;
+    }
+
+    public void Update()
+    {
+        SetPosition();
+    }
+
+    void SetPosition()
+    {
+        transform.position = m_characterBodyTransform.position + m_characterOffset;
     }
 
     public void Speak(string message)

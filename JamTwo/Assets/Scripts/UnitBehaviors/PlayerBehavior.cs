@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.UI;
 
 /// <summary>
 /// Master behavioral logic for the Player.
@@ -19,8 +20,7 @@ public class PlayerBehavior : MonoBehaviour
     Rigidbody2D m_rigidBody;
     SoundPing m_soundPing;
     Animator m_animator;
-
-    Vector3 interactionsOffset;
+    WordBalloon m_wordBalloon;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,23 +28,20 @@ public class PlayerBehavior : MonoBehaviour
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_soundPing = GetComponentInChildren<SoundPing>();
         m_animator = GetComponent<Animator>();
+        m_wordBalloon = 
+            transform.parent.GetComponentInChildren<WordBalloon>();
+    }
 
-        interactionsOffset = interactionsTransform.position - transform.position;
+    void Start()
+    {
+        m_wordBalloon.Speak("Hello!");
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Reposition child objects
-        SetInteractionsPosition();
-
         // Default behavior for now: Simple movement
         Walk();
-    }
-
-    void SetInteractionsPosition()
-    {
-        interactionsTransform.position = transform.position + interactionsOffset;
     }
 
     void Walk()
