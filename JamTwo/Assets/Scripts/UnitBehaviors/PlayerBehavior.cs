@@ -10,6 +10,7 @@ using UnityEngine.Scripting.APIUpdating;
 public class PlayerBehavior : MonoBehaviour
 {
     public CapsuleCollider2D soundTrigger;
+    public Transform interactionsTransform;
 
     public float walkSpeed;
     public float idlePingScale;
@@ -19,19 +20,31 @@ public class PlayerBehavior : MonoBehaviour
     SoundPing m_soundPing;
     Animator m_animator;
 
+    Vector3 interactionsOffset;
+
     // Start is called before the first frame update
     void Awake()
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_soundPing = GetComponentInChildren<SoundPing>();
         m_animator = GetComponent<Animator>();
+
+        interactionsOffset = interactionsTransform.position - transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Reposition child objects
+        SetInteractionsPosition();
+
         // Default behavior for now: Simple movement
         Walk();
+    }
+
+    void SetInteractionsPosition()
+    {
+        interactionsTransform.position = transform.position + interactionsOffset;
     }
 
     void Walk()
