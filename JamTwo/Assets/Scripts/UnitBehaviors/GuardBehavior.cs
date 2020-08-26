@@ -23,8 +23,10 @@ public class GuardBehavior : MonoBehaviour
 
     public enum GuardState
     {
-        Asleep, Patrol
+        Asleep, Patrol, Panic
     }
+
+    int m_panicPointId = 0;
 
     Rigidbody2D m_rigidBody;
     Animator m_animator;
@@ -39,13 +41,20 @@ public class GuardBehavior : MonoBehaviour
             if (value != m_behaviorState)
             {
                 m_behaviorState = value;
+                StopAllCoroutines();
                 if (value == GuardState.Patrol)
                 {
-                    StopAllCoroutines();
                     m_patrolPointIndex = 0;
                     m_animator.SetBool("isWalking", true);
 
                     StartCoroutine(Patrol());
+                }
+                if (value == GuardState.Panic)
+                {
+                    m_animator.SetBool("isWalking", true);
+                    patrolSpeed *= 1.5f;
+
+                    StartCoroutine(Panic());
                 }
             }
         }
@@ -114,7 +123,38 @@ public class GuardBehavior : MonoBehaviour
         // Exit immediately if ray hits a wall.
         if (result) return;
 
-       // Behavior upon spotting Player / Zombie goes here
+        // Behavior upon spotting Player / Zombie goes here
+        State = GuardState.Panic;
 
+    }
+
+    IEnumerator Panic()
+    {
+        m_panicPointId = GameManager.instance.GetCurrentPatrolPointId(
+            patrolPoints[m_patrolPointIndex].transform.position);
+
+        while (true)
+        {
+            var destination = GameManager.instance.GetPatrolPoint(m_panicPointId);
+            var distanceFromDestination =
+                Vector3.Distance(destination, transform.position);
+            if (distanceFromDestination <= m_turningDistance)
+            {
+                m_panicPointId =
+                    GameManager.instance.GetRandomPatrolPoint(m_panicPointId).id;
+                destination = GameManager.instance.GetPatrolPoint(m_panicPointId);
+            }
+
+            var moveVector = (destination - transform.position).normalized *
+                patrolSpeed;
+            m_rigidBody.velocity = moveVector;
+
+            var scale = transform.localScale;
+            float absX = Mathf.Abs(scale.x);
+            if (moveVector.x < 0f) scale.x = absX * -1f;
+            else if (moveVector.x > 0f) scale.x = absX;
+            transform.localScale = scale;
+            yield return null;
+        }
     }
 }
