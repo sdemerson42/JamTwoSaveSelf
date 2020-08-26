@@ -21,16 +21,36 @@ public class GuardBehavior : MonoBehaviour
 
     public float maxSightDistance;
 
-    public enum GuardStates
+    public enum GuardState
     {
-        Patrol
+        Asleep, Patrol
     }
 
     Rigidbody2D m_rigidBody;
     Animator m_animator;
     WordBalloon m_wordBalloon;
 
-    GuardStates m_behaviorState;
+    GuardState m_behaviorState;
+    public GuardState State
+    {
+        get => m_behaviorState;
+        set
+        {
+            if (value != m_behaviorState)
+            {
+                m_behaviorState = value;
+                if (value == GuardState.Patrol)
+                {
+                    StopAllCoroutines();
+                    m_patrolPointIndex = 0;
+                    m_animator.SetBool("isWalking", true);
+
+                    StartCoroutine(Patrol());
+                }
+            }
+        }
+    }
+
     int m_patrolPointIndex;
     const float m_turningDistance = .1f;
 
@@ -42,20 +62,7 @@ public class GuardBehavior : MonoBehaviour
 
         // Initialize behavior
 
-        SetBehaviorState(GuardStates.Patrol);
-    }
-
-    public void SetBehaviorState(GuardStates state)
-    {
-        if (state == GuardStates.Patrol)
-        {
-            m_patrolPointIndex = 0;
-            m_animator.SetBool("isWalking", true);
-
-            StartCoroutine(Patrol());
-        }
-
-        m_behaviorState = state;
+        State = GuardState.Patrol;
     }
 
     IEnumerator Patrol()
@@ -70,11 +77,6 @@ public class GuardBehavior : MonoBehaviour
                 // Wait for specified amount of time, then set new destination
                 m_animator.SetBool("isWalking", false);
                 m_rigidBody.velocity = Vector2.zero;
-
-                // TEMP CODE
-                m_wordBalloon.Speak("Everyone finds us so intimidating. Nobody ever says, \"Wow, nice gun!\"");
-                // END TEMP
-
                 yield return new WaitForSeconds(patrolPoints[m_patrolPointIndex].waitTime);
 
                 m_patrolPointIndex = (m_patrolPointIndex + 1) % patrolPoints.Length;
@@ -112,12 +114,7 @@ public class GuardBehavior : MonoBehaviour
         // Exit immediately if ray hits a wall.
         if (result) return;
 
-        // TEST CODE
-
-        GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f);
-        Debug.Log($"Oh no! I see {noise.transform.parent.tag}!!");
-
-        // END TEST
+       // Behavior upon spotting Player / Zombie goes here
 
     }
 }

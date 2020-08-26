@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 671741124}
   - component: {fileID: 671741123}
   - component: {fileID: 671741122}
+  - component: {fileID: 1807578470}
   m_Layer: 0
   m_Name: InteractionCanvas
   m_TagString: Untagged
@@ -252,6 +253,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1807578470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671741120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bff5159a9799d349b71626777d85ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1301240611
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textObject: {fileID: 6048427486998354627}
+  balloonColor: {r: 0.4141124, g: 0.6698113, b: 0.38861695, a: 1}
 --- !u!95 &3358619877928140062
 Animator:
   serializedVersion: 3
@@ -896,7 +910,7 @@ GameObject:
   - component: {fileID: 6123442954585853187}
   - component: {fileID: 6123442954585853192}
   m_Layer: 8
-  m_Name: PlayerBody
+  m_Name: Body
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,7 +34,6 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        m_wordBalloon.Speak("Hello!");
     }
 
     // Update is called once per frame
@@ -46,6 +45,11 @@ public class PlayerBehavior : MonoBehaviour
 
     void Walk()
     {
+        // Ignore consequences of input during
+        // pause state
+
+        if (Time.timeScale == 0f) return;
+
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
 
