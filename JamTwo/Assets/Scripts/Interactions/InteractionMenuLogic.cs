@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionLogic : MonoBehaviour
+public class InteractionMenuLogic : MonoBehaviour
 {
 
     Transform m_characterTransform;
@@ -12,6 +12,7 @@ public class InteractionLogic : MonoBehaviour
     {
         m_characterTransform = transform.parent.GetChild(0);
         m_characterOffset = transform.position - m_characterTransform.position;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame

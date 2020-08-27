@@ -20,6 +20,7 @@ public class GuardBehavior : MonoBehaviour
     public PatrolData[] patrolPoints;
 
     public float maxSightDistance;
+    public float panicSpeedMultiplier;
 
     public enum GuardState
     {
@@ -52,7 +53,7 @@ public class GuardBehavior : MonoBehaviour
                 if (value == GuardState.Panic)
                 {
                     m_animator.SetBool("isWalking", true);
-                    patrolSpeed *= 1.5f;
+                    patrolSpeed *= panicSpeedMultiplier;
 
                     StartCoroutine(Panic());
                 }
@@ -124,7 +125,12 @@ public class GuardBehavior : MonoBehaviour
         if (result) return;
 
         // Behavior upon spotting Player / Zombie goes here
-        State = GuardState.Panic;
+
+        if (noise.tag == "Zombie")
+        {
+            State = GuardState.Panic;
+            return;
+        }
 
     }
 

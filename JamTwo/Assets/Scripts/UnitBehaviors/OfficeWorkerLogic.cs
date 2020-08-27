@@ -7,6 +7,7 @@ public class OfficeWorkerLogic : MonoBehaviour
     public float idleWaitToSpeakMin;
     public float idleWaitToSpeakMax;
     public string[] banalities;
+    public GameObject interaction;
 
     public enum OfficeWorkerState
     {
