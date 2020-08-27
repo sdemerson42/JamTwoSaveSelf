@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour
 {
+    public float conversationWaitTime;
+
     GameObject m_player;
     GameObject m_npc;
     WordBalloon m_playerBalloon;
     WordBalloon m_npcBalloon;
-    InteractionMenuLogic m_playerMenu;
-
-    int m_stateCounter;
+    OfficeWorkerBehavior m_npcBehavior;
+    PlayerBehavior m_playerBehavior;
 
     public void Initialize(GameObject player, GameObject npc)
     {
@@ -18,10 +19,8 @@ public class Interaction : MonoBehaviour
         m_npc = npc;
         m_playerBalloon = player.GetComponentInChildren<WordBalloon>();
         m_npcBalloon = npc.GetComponentInChildren<WordBalloon>();
-
-        // Get reference to player's interaction menu
-        m_player.transform.GetChild(1).gameObject.SetActive(true);
-        m_player.GetComponentInChildren<InteractionMenuLogic>();
+        m_playerBehavior = player.GetComponentInChildren<PlayerBehavior>();
+        m_npcBehavior = npc.GetComponentInChildren<OfficeWorkerBehavior>();
 
         // Set word balloons of interacting characters to appropriate update mode
         m_playerBalloon.gameObject.GetComponent<Animator>().updateMode =
@@ -33,25 +32,31 @@ public class Interaction : MonoBehaviour
 
         m_player.GetComponentInChildren<SoundPing>().gameObject.
             GetComponent<SpriteRenderer>().enabled = false;
-
-        m_stateCounter = 0;
     }
 
-    private void Update()
+    private void Start()
     {
         // NOTE: timeScale is set to 0f during interaction, so
         // coroutines won't work. All logic must be handled
         // via update calls, and animations must be set to
         // the appropriate update mode to function during the interaction.
 
-        // A local state counter will be used as a crude state machine.
+        // Plan: Make sequence work via chained coroutines.
 
-        if (m_stateCounter == 0)
-        {
-            ++m_stateCounter;
-            m_npcBalloon.Speak("HELLO!");
-        }
+        StartCoroutine(PhaseOne());
+    }
 
+    string RandomString(string[] ary)
+    {
+        return ary[Random.Range(0, ary.Length)];
+    }
 
+    IEnumerator PhaseOne()
+    {
+        m_npcBalloon.Stop();
+        yield return new WaitForSecondsRealtime(0.5f);
+        m_npcBalloon.Speak(RandomString(m_npcBehavior.openingLine));
+        yield return new WaitForSecondsRealtime(3f);
+        m_npcBalloon.Stop();
     }
 }

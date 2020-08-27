@@ -2,12 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OfficeWorkerLogic : MonoBehaviour
+public class OfficeWorkerBehavior : MonoBehaviour
 {
     public float idleWaitToSpeakMin;
     public float idleWaitToSpeakMax;
     public string[] banalities;
     public GameObject interaction;
+
+    // Interaction data
+
+    public string[] openingLine;
+    public float baseThinkSuccess;
+    public string[] thinkWinLine;
+    public string[] thinkLoseLine;
+    public float baseIntimidateSuccess;
+    public string[] intimidateWinLine;
+    public string[] intimidateLoseLine;
+    public float baseCharmSuccess;
+    public string[] charmWinLine;
+    public string[] charmLoseLine;
+
 
     public enum OfficeWorkerState
     {

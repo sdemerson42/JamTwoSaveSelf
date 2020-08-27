@@ -3659,6 +3659,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: openingLine.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkWinLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkLoseLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateWinLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateLoseLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmWinLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmLoseLine.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
       propertyPath: interactionCollider
       value: 
       objectReference: {fileID: 2025044786}
@@ -3666,6 +3694,82 @@ PrefabInstance:
       propertyPath: interaction
       value: 
       objectReference: {fileID: 5248211182764164054, guid: e0098c6a4451c78459e4160c3f333340, type: 3}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: openingLine
+      value: '*Sigh* Nobody ever wants to nerd out with me.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: baseThinkSuccess
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: baseIntimidateSuccess
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: baseCharmSuccess
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateWinLine
+      value: Don't hurt me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateLoseLine
+      value: Not the wedgie!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: openingLine.Array.data[0]
+      value: '*Sigh* Nobody ever wants to nerd out with me.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkWinLine.Array.data[0]
+      value: What? Show me! If there's a Boba Fett, I call it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkWinLine.Array.data[1]
+      value: What's a matter, reactor? Haha, good one!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkLoseLine.Array.data[0]
+      value: Nice try. Actually, not really.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: thinkLoseLine.Array.data[1]
+      value: Aren't you a janitor?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateLoseLine.Array.data[0]
+      value: Actually, I'm more of a geek. Also, screw you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateLoseLine.Array.data[1]
+      value: I've received so many wedgies, I'm immune.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateWinLine.Array.data[0]
+      value: Don't hurt me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: intimidateWinLine.Array.data[1]
+      value: Not the wedgie!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmWinLine.Array.data[0]
+      value: WHAT?! Wait until he sees my PowerPoint!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmWinLine.Array.data[1]
+      value: Out of my way! You can't take the sky from me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmLoseLine.Array.data[0]
+      value: Are you saying he couldn't? Here's why Picard wins, every time...
+      objectReference: {fileID: 0}
+    - target: {fileID: 5532731627818921360, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
+      propertyPath: charmLoseLine.Array.data[1]
+      value: Pshaw, I prefer Farscape.
+      objectReference: {fileID: 0}
     - target: {fileID: 5532731627818921375, guid: 982a795c694ae3b4ea89c57986236c96, type: 3}
       propertyPath: m_TagString
       value: OfficeWorker
@@ -3790,6 +3894,14 @@ PrefabInstance:
     - target: {fileID: 6123442954553848345, guid: d08ac6d6467fd844a8501545eb4f6225, type: 3}
       propertyPath: m_TagString
       value: PlayerNoise
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123442954585853190, guid: d08ac6d6467fd844a8501545eb4f6225, type: 3}
+      propertyPath: startingHumanity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6123442954585853190, guid: d08ac6d6467fd844a8501545eb4f6225, type: 3}
+      propertyPath: humanityLossRate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d08ac6d6467fd844a8501545eb4f6225, type: 3}
