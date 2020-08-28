@@ -328,6 +328,7 @@ MonoBehaviour:
   - transform: {fileID: 0}
     waitTime: 1.5
   maxSightDistance: 100
+  panicSpeedMultiplier: 2
 --- !u!1 &4820264064743927143
 GameObject:
   m_ObjectHideFlags: 0

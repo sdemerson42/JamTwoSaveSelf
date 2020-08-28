@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -16,8 +17,10 @@ public class PlayerBehavior : MonoBehaviour
     public float walkSpeed;
     public float idlePingScale;
     public float walkingPingScale;
+    public float maxPingIncrease;
     public float startingHumanity;
     public float humanityLossRate;
+    public string[] zombieNoises;
 
     Rigidbody2D m_rigidBody;
     SoundPing m_soundPing;
@@ -54,14 +57,19 @@ public class PlayerBehavior : MonoBehaviour
             m_humanity = Mathf.Max(0f, m_humanity - humanityLossRate);
 
             float humanityRatio = m_humanity / startingHumanity;
-            Color color = new Color(1f * humanityRatio, 1f, 1f * humanityRatio);
+            Color color = new Color(humanityRatio, 1f, humanityRatio);
             m_spriteRenderer.color = color;
         }
     }
 
-    float GetCurrentHumanity()
+    public float GetCurrentHumanityRatio()
     {
-        return m_humanity;
+        return m_humanity / startingHumanity;
+    }
+
+    public void AddToCurrentHumanity(float value)
+    {
+        m_humanity = Mathf.Clamp(m_humanity + value, 0f, startingHumanity);
     }
 
     // Update is called once per frame
@@ -88,18 +96,22 @@ public class PlayerBehavior : MonoBehaviour
 
         if (hInput == 0f && vInput == 0f)
         {
-            m_soundPing.pingScale = idlePingScale;
+            var adjustedScale = idlePingScale + maxPingIncrease *
+                (1f - GetCurrentHumanityRatio());
+            m_soundPing.pingScale = adjustedScale;
             soundTrigger.transform.localScale = new Vector3(
-                idlePingScale, idlePingScale, idlePingScale);
+                adjustedScale, adjustedScale, adjustedScale);
             
             m_animator.SetBool("isWalking", false);
 
         }
         else
         {
-            m_soundPing.pingScale = walkingPingScale;
+            var adjustedScale = walkingPingScale + maxPingIncrease *
+                (1f - GetCurrentHumanityRatio());
+            m_soundPing.pingScale = adjustedScale;
             soundTrigger.transform.localScale = new Vector3(
-                walkingPingScale, walkingPingScale, walkingPingScale);
+                adjustedScale, adjustedScale, adjustedScale);
 
             m_animator.SetBool("isWalking", true);
             var scale = transform.localScale;

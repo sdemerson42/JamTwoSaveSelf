@@ -8,17 +8,22 @@ public class OfficeWorkerBehavior : MonoBehaviour
     public float idleWaitToSpeakMax;
     public string[] banalities;
     public GameObject interaction;
+    public GameObject zombieForm;
+    public GameObject[] guardsToAlert;
 
     // Interaction data
 
     public string[] openingLine;
     public float baseThinkSuccess;
+    public string[] thinkPCLine;
     public string[] thinkWinLine;
     public string[] thinkLoseLine;
     public float baseIntimidateSuccess;
+    public string[] intimidatePCLine;
     public string[] intimidateWinLine;
     public string[] intimidateLoseLine;
     public float baseCharmSuccess;
+    public string[] charmPCLine;
     public string[] charmWinLine;
     public string[] charmLoseLine;
 

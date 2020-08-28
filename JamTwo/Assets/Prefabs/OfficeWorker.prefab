@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5532731627818921360}
   m_Layer: 8
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: OfficeWorker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,6 +142,41 @@ MonoBehaviour:
   - Weather!
   - How about that game last night?
   - Those clowns in Washington are at it again!
+  interaction: {fileID: 5248211182764164054, guid: e0098c6a4451c78459e4160c3f333340, type: 3}
+  zombieForm: {fileID: 3040296258623084297, guid: 90d7d731fcade6b4ea92b21aa31c9519, type: 3}
+  guardsToAlert: []
+  openingLine:
+  - '*Sigh* Nobody ever wants to nerd out with me.'
+  baseThinkSuccess: 0.3
+  thinkPCLine:
+  - Look over there! Limited-edition figurines in mint condition!
+  - Can you point me towards the matter reactor?
+  thinkWinLine:
+  - What? Show me! If there's a Boba Fett, I call it!
+  - What's a matter, reactor? Haha, good one!
+  thinkLoseLine:
+  - Nice try. Actually, not really.
+  - Aren't you a janitor?
+  baseIntimidateSuccess: 0.2
+  intimidatePCLine:
+  - Outta my way, NERD!
+  - Move it, or you'll get a wedgie!
+  intimidateWinLine:
+  - Don't hurt me!
+  - Not the wedgie!
+  intimidateLoseLine:
+  - Actually, I'm more of a geek. Also, screw you!
+  - I've received so many wedgies, I'm immune.
+  baseCharmSuccess: 0.9
+  charmPCLine:
+  - That guy over there thinks Picard could kick Kirk's ass!
+  - Did you know they're showing Firefly in the breakroom?
+  charmWinLine:
+  - WHAT?! Wait until he sees my PowerPoint!
+  - Out of my way! You can't take the sky from me!
+  charmLoseLine:
+  - Are you saying he couldn't? Here's why Picard wins, every time...
+  - Pshaw, I prefer Farscape.
 --- !u!1 &5532731627953013393
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,9 +322,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5532731627991775846}
   - component: {fileID: 5532731627991775847}
+  - component: {fileID: 2025044787}
   m_Layer: 0
   m_Name: InteractionTrigger
-  m_TagString: Untagged
+  m_TagString: OfficeWorker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +360,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 4.7, y: 1}
   m_Direction: 0
+--- !u!114 &2025044787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532731627991775841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5898f754390e0ff488859f65735face6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5532731629130480732
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +537,7 @@ GameObject:
   - component: {fileID: 5532731629564853704}
   m_Layer: 0
   m_Name: OfficeWorker
-  m_TagString: Untagged
+  m_TagString: OfficeWorker
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

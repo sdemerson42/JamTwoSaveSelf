@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4925420492911652164}
   m_Layer: 0
   m_Name: SoundTrigger
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4925420494096273711}
   - component: {fileID: 1461763826}
   m_Layer: 8
-  m_Name: Zombie
+  m_Name: MaleZombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
