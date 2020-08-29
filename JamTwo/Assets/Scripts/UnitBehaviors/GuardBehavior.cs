@@ -20,17 +20,47 @@ public class GuardBehavior : MonoBehaviour
     public PatrolData[] patrolPoints;
 
     public float maxSightDistance;
+    public float panicSpeedMultiplier;
 
-    public enum GuardStates
+    public enum GuardState
     {
-        Patrol
+        Asleep, Patrol, Panic
     }
+
+    int m_panicPointId = 0;
 
     Rigidbody2D m_rigidBody;
     Animator m_animator;
     WordBalloon m_wordBalloon;
 
-    GuardStates m_behaviorState;
+    GuardState m_behaviorState;
+    public GuardState State
+    {
+        get => m_behaviorState;
+        set
+        {
+            if (value != m_behaviorState)
+            {
+                m_behaviorState = value;
+                StopAllCoroutines();
+                if (value == GuardState.Patrol)
+                {
+                    m_patrolPointIndex = 0;
+                    m_animator.SetBool("isWalking", true);
+
+                    StartCoroutine(Patrol());
+                }
+                if (value == GuardState.Panic)
+                {
+                    m_animator.SetBool("isWalking", true);
+                    patrolSpeed *= panicSpeedMultiplier;
+
+                    StartCoroutine(Panic());
+                }
+            }
+        }
+    }
+
     int m_patrolPointIndex;
     const float m_turningDistance = .1f;
 
@@ -38,24 +68,11 @@ public class GuardBehavior : MonoBehaviour
     {
         m_rigidBody = GetComponent<Rigidbody2D>();
         m_animator = GetComponent<Animator>();
-        m_wordBalloon = GetComponentInChildren<WordBalloon>();
+        m_wordBalloon = transform.parent.GetComponentInChildren<WordBalloon>();
 
         // Initialize behavior
 
-        SetBehaviorState(GuardStates.Patrol);
-    }
-
-    public void SetBehaviorState(GuardStates state)
-    {
-        if (state == GuardStates.Patrol)
-        {
-            m_patrolPointIndex = 0;
-            m_animator.SetBool("isWalking", true);
-
-            StartCoroutine(Patrol());
-        }
-
-        m_behaviorState = state;
+        State = GuardState.Patrol;
     }
 
     IEnumerator Patrol()
@@ -70,11 +87,6 @@ public class GuardBehavior : MonoBehaviour
                 // Wait for specified amount of time, then set new destination
                 m_animator.SetBool("isWalking", false);
                 m_rigidBody.velocity = Vector2.zero;
-
-                // TEMP CODE
-                m_wordBalloon.Speak("Everyone finds us so intimidating. Nobody ever says, \"Wow, nice gun!\"");
-                // END TEMP
-
                 yield return new WaitForSeconds(patrolPoints[m_patrolPointIndex].waitTime);
 
                 m_patrolPointIndex = (m_patrolPointIndex + 1) % patrolPoints.Length;
@@ -89,6 +101,12 @@ public class GuardBehavior : MonoBehaviour
             var moveVector = (destination - transform.position).normalized *
                 patrolSpeed;
             m_rigidBody.velocity = moveVector;
+
+            var scale = transform.localScale;
+            float absX = Mathf.Abs(scale.x);
+            if (moveVector.x < 0f) scale.x = absX * -1f;
+            else if (moveVector.x > 0f) scale.x = absX;
+            transform.localScale = scale;
 
             yield return null;
         }
@@ -106,12 +124,43 @@ public class GuardBehavior : MonoBehaviour
         // Exit immediately if ray hits a wall.
         if (result) return;
 
-        // TEST CODE
+        // Behavior upon spotting Player / Zombie goes here
 
-        GetComponent<SpriteRenderer>().color = new Color(1f, 0f, 0f);
-        Debug.Log($"Oh no! I see {noise.transform.parent.tag}!!");
+        if (noise.tag == "Zombie")
+        {
+            State = GuardState.Panic;
+            return;
+        }
 
-        // END TEST
+    }
 
+    IEnumerator Panic()
+    {
+        m_panicPointId = GameManager.instance.GetCurrentPatrolPointId(
+            patrolPoints[m_patrolPointIndex].transform.position);
+
+        while (true)
+        {
+            var destination = GameManager.instance.GetPatrolPoint(m_panicPointId);
+            var distanceFromDestination =
+                Vector3.Distance(destination, transform.position);
+            if (distanceFromDestination <= m_turningDistance)
+            {
+                m_panicPointId =
+                    GameManager.instance.GetRandomPatrolPoint(m_panicPointId).id;
+                destination = GameManager.instance.GetPatrolPoint(m_panicPointId);
+            }
+
+            var moveVector = (destination - transform.position).normalized *
+                patrolSpeed;
+            m_rigidBody.velocity = moveVector;
+
+            var scale = transform.localScale;
+            float absX = Mathf.Abs(scale.x);
+            if (moveVector.x < 0f) scale.x = absX * -1f;
+            else if (moveVector.x > 0f) scale.x = absX;
+            transform.localScale = scale;
+            yield return null;
+        }
     }
 }

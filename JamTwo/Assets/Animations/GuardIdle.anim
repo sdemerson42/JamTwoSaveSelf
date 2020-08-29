@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2268008832426177244, guid: 653cf64733162c143ad53fd30a26aebd, type: 3}
+      value: {fileID: 9089371372631005868, guid: 6359144ade4ed7248849f28168870714, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2268008832426177244, guid: 653cf64733162c143ad53fd30a26aebd, type: 3}
+    - {fileID: 9089371372631005868, guid: 6359144ade4ed7248849f28168870714, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

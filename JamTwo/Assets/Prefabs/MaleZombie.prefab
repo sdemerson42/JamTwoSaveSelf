@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4925420492911652164}
   m_Layer: 0
   m_Name: SoundTrigger
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,8 +73,9 @@ GameObject:
   - component: {fileID: 4925420494096273708}
   - component: {fileID: 4925420494096273709}
   - component: {fileID: 4925420494096273711}
-  m_Layer: 0
-  m_Name: Zombie
+  - component: {fileID: 1461763826}
+  m_Layer: 8
+  m_Name: MaleZombie
   m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +136,7 @@ SpriteRenderer:
   m_SortingLayerID: 22383821
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1913674392024546987, guid: 653cf64733162c143ad53fd30a26aebd, type: 3}
+  m_Sprite: {fileID: 3715609390757121382, guid: 6359144ade4ed7248849f28168870714, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -180,8 +181,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.014924288, y: -0.024873495}
-  m_Size: {x: 0.70893717, y: 0.8308606}
+  m_Offset: {x: 0.13, y: -0.36}
+  m_Size: {x: 0.35, y: 0.0001}
   m_Direction: 0
 --- !u!114 &4925420494096273711
 MonoBehaviour:
@@ -195,8 +196,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cbdfecc833d1a14e81cdd1eb12442e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 2
+  walkSpeed: 1
   minSecondsToWalk: 3
   maxSecondsToWalk: 5
   minSecondsToWait: 1
   maxSecondsToWait: 2
+--- !u!95 &1461763826
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925420494096273704}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 28a152465eea013449c4e9f152f15762, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

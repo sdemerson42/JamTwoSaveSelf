@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Guard
   - Zombie
+  - OfficeWorker
+  - PlayerNoise
   layers:
   - Default
   - TransparentFX
