@@ -144,7 +144,8 @@ MonoBehaviour:
   - Those clowns in Washington are at it again!
   interaction: {fileID: 5248211182764164054, guid: e0098c6a4451c78459e4160c3f333340, type: 3}
   zombieForm: {fileID: 3040296258623084297, guid: 90d7d731fcade6b4ea92b21aa31c9519, type: 3}
-  guardsToAlert: []
+  guardsToAlert:
+  - {fileID: 0}
   openingLine:
   - '*Sigh* Nobody ever wants to nerd out with me.'
   baseThinkSuccess: 0.3
