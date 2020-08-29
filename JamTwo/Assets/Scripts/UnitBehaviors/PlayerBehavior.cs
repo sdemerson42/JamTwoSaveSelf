@@ -22,6 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     public float humanityLossRate;
     public string[] zombieNoises;
 
+    public Slider zombieSlider;
+
     Rigidbody2D m_rigidBody;
     SoundPing m_soundPing;
     Animator m_animator;
@@ -59,6 +61,7 @@ public class PlayerBehavior : MonoBehaviour
             float humanityRatio = m_humanity / startingHumanity;
             Color color = new Color(humanityRatio, 1f, humanityRatio);
             m_spriteRenderer.color = color;
+            zombieSlider.value = humanityRatio;
         }
     }
 

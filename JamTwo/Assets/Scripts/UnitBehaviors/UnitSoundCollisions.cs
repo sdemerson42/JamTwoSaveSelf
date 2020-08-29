@@ -19,10 +19,18 @@ public class UnitSoundCollisions : MonoBehaviour
 
     private void ZombieLogic(Collider2D collision)
     {
+        // ARGH!! Guards and office workers should have
+        // inherited from a common base class!!!
         if (collision.tag == "Guard")
         {
             var guardBehavior = collision.gameObject.GetComponent<GuardBehavior>();
             guardBehavior.LookAtNoise(gameObject);
+        }
+
+        if (collision.tag == "OfficeWorker")
+        {
+            var officeWorkerBehavior = collision.gameObject.GetComponent<OfficeWorkerBehavior>()
+                .State = OfficeWorkerBehavior.OfficeWorkerState.Panic;
         }
     }
 
@@ -30,12 +38,16 @@ public class UnitSoundCollisions : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            var interaction = transform.parent.
-                GetComponentInChildren<OfficeWorkerBehavior>().interaction;
+            var behavior = transform.parent.
+                GetComponentInChildren<OfficeWorkerBehavior>();
+            if (behavior.Interacted) return;
+
+            var interaction = behavior.interaction;
             var instance = Instantiate(interaction, transform.position, Quaternion.identity);
             instance.GetComponent<Interaction>().Initialize(
                 collision.transform.parent.gameObject, transform.parent.gameObject);
             GameManager.instance.Pause();
         }
+
     }
 }

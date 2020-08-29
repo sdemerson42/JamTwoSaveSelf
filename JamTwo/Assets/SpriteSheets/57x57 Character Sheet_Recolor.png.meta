@@ -1,0 +1,1114 @@
+fileFormatVersion: 2
+guid: 56d6376a22d9a924d97895b7668b7a85
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1214701736113375454
+    second: 57x57 Character Sheet_Recolor_0
+  - first:
+      213: 7837981704524462301
+    second: 57x57 Character Sheet_Recolor_1
+  - first:
+      213: 2778062798882720049
+    second: 57x57 Character Sheet_Recolor_2
+  - first:
+      213: -2733505635768789930
+    second: 57x57 Character Sheet_Recolor_3
+  - first:
+      213: 5700113196956585816
+    second: 57x57 Character Sheet_Recolor_4
+  - first:
+      213: 3253281966443103080
+    second: 57x57 Character Sheet_Recolor_5
+  - first:
+      213: 8042915395045453018
+    second: 57x57 Character Sheet_Recolor_6
+  - first:
+      213: 6950339309431847872
+    second: 57x57 Character Sheet_Recolor_7
+  - first:
+      213: -6906167217987567094
+    second: 57x57 Character Sheet_Recolor_8
+  - first:
+      213: -3874121119194090955
+    second: 57x57 Character Sheet_Recolor_9
+  - first:
+      213: 7825418048566476735
+    second: 57x57 Character Sheet_Recolor_10
+  - first:
+      213: 5672259769228157949
+    second: 57x57 Character Sheet_Recolor_11
+  - first:
+      213: 8254195736198271648
+    second: 57x57 Character Sheet_Recolor_12
+  - first:
+      213: 7017721454791534174
+    second: 57x57 Character Sheet_Recolor_13
+  - first:
+      213: 7558792378201736848
+    second: 57x57 Character Sheet_Recolor_14
+  - first:
+      213: -6431189819416418627
+    second: 57x57 Character Sheet_Recolor_15
+  - first:
+      213: 7121194068180580946
+    second: 57x57 Character Sheet_Recolor_16
+  - first:
+      213: -4672016491269519558
+    second: 57x57 Character Sheet_Recolor_17
+  - first:
+      213: 1344168024923632404
+    second: 57x57 Character Sheet_Recolor_18
+  - first:
+      213: -9087581314433578628
+    second: 57x57 Character Sheet_Recolor_19
+  - first:
+      213: -4222974489160521833
+    second: 57x57 Character Sheet_Recolor_20
+  - first:
+      213: 5968143111381211077
+    second: 57x57 Character Sheet_Recolor_21
+  - first:
+      213: 1108228349913149736
+    second: 57x57 Character Sheet_Recolor_22
+  - first:
+      213: -4550964957850334848
+    second: 57x57 Character Sheet_Recolor_23
+  - first:
+      213: -6903513871091445463
+    second: 57x57 Character Sheet_Recolor_24
+  - first:
+      213: 7560862648155150509
+    second: 57x57 Character Sheet_Recolor_25
+  - first:
+      213: 8710921478392516246
+    second: 57x57 Character Sheet_Recolor_26
+  - first:
+      213: 116165499299253234
+    second: 57x57 Character Sheet_Recolor_27
+  - first:
+      213: 9171844583725417661
+    second: 57x57 Character Sheet_Recolor_28
+  - first:
+      213: 8964426441966000722
+    second: 57x57 Character Sheet_Recolor_29
+  - first:
+      213: 6987791617981821396
+    second: 57x57 Character Sheet_Recolor_30
+  - first:
+      213: -8814209042330337491
+    second: 57x57 Character Sheet_Recolor_31
+  - first:
+      213: -4738535447186158046
+    second: 57x57 Character Sheet_Recolor_32
+  - first:
+      213: -3396867996348007219
+    second: 57x57 Character Sheet_Recolor_33
+  - first:
+      213: -3289778665886144024
+    second: 57x57 Character Sheet_Recolor_34
+  - first:
+      213: -3558010164287491801
+    second: 57x57 Character Sheet_Recolor_35
+  - first:
+      213: -3158098058835563599
+    second: 57x57 Character Sheet_Recolor_36
+  - first:
+      213: -8336189067112675081
+    second: 57x57 Character Sheet_Recolor_37
+  - first:
+      213: 1941979665785765159
+    second: 57x57 Character Sheet_Recolor_38
+  - first:
+      213: 4177214848909862656
+    second: 57x57 Character Sheet_Recolor_39
+  - first:
+      213: -1717755698124609685
+    second: 57x57 Character Sheet_Recolor_40
+  - first:
+      213: 3202991174415377397
+    second: 57x57 Character Sheet_Recolor_41
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 57
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed886111bcc7bd010800000000000000
+      internalID: 1214701736113375454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 513
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8f03635da16cc60800000000000000
+      internalID: 7837981704524462301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 513
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139c1239569ad8620800000000000000
+      internalID: 2778062798882720049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 513
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65419746b13a01ad0800000000000000
+      internalID: -2733505635768789930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_4
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 513
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85f0d1c80ceda1f40800000000000000
+      internalID: 5700113196956585816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 456
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863860c36baf52d20800000000000000
+      internalID: 3253281966443103080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_6
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 456
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc643840fc2e9f60800000000000000
+      internalID: 8042915395045453018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 456
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb7e1707c0947060800000000000000
+      internalID: 6950339309431847872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_8
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 456
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a024764718d5820a0800000000000000
+      internalID: -6906167217987567094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 456
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532f8993e5b5c3ac0800000000000000
+      internalID: -3874121119194090955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 399
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf3cbb1148799c60800000000000000
+      internalID: 7825418048566476735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_11
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 399
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3659a053ae7be40800000000000000
+      internalID: 5672259769228157949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_12
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 399
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a254aa1a4bcc8270800000000000000
+      internalID: 8254195736198271648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_13
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 399
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56ac7d4b74f36160800000000000000
+      internalID: 7017721454791534174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09605a9ae9936e860800000000000000
+      internalID: 7558792378201736848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_15
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 342
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db66392eee2dfb6a0800000000000000
+      internalID: -6431189819416418627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 342
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25ab58a764093d260800000000000000
+      internalID: 7121194068180580946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_17
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 342
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a370d1d21c9a92fb0800000000000000
+      internalID: -4672016491269519558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413f20c62b177a210800000000000000
+      internalID: 1344168024923632404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_19
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 285
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7985bd41fc62e180800000000000000
+      internalID: -9087581314433578628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_20
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 285
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797ec0e831bf465c0800000000000000
+      internalID: -4222974489160521833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_21
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 285
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7529a0a8a13d250800000000000000
+      internalID: 5968143111381211077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821379600d7316f00800000000000000
+      internalID: 1108228349913149736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_23
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 228
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089841e9b79b7d0c0800000000000000
+      internalID: -4550964957850334848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_24
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 228
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 921dc9be5bac130a0800000000000000
+      internalID: -6903513871091445463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_25
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 228
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da89ec2f4849de860800000000000000
+      internalID: 7560862648155150509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e08e1aee863e870800000000000000
+      internalID: 8710921478392516246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_27
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb43e8f7e3bc9100800000000000000
+      internalID: 116165499299253234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_28
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db44b0ced00f84f70800000000000000
+      internalID: 9171844583725417661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_29
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 171
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a90887a5a086c70800000000000000
+      internalID: 8964426441966000722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d13242247f99f060800000000000000
+      internalID: 6987791617981821396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_31
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f3ddf5393ada580800000000000000
+      internalID: -8814209042330337491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_32
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e4fdadd175d3eb0800000000000000
+      internalID: -4738535447186158046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_33
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 114
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccb8c00e86ebd0d0800000000000000
+      internalID: -3396867996348007219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9a23ebbbb5852d0800000000000000
+      internalID: -3289778665886144024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_35
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7213a625b986f9ec0800000000000000
+      internalID: -3558010164287491801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_36
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb614d3c8e2c24d0800000000000000
+      internalID: -3158098058835563599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_37
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 57
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80142e538ef4c80800000000000000
+      internalID: -8336189067112675081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d313c873c43fa10800000000000000
+      internalID: 1941979665785765159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_39
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00762c3f5c278f930800000000000000
+      internalID: 4177214848909862656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_40
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67216a2b4e4928e0800000000000000
+      internalID: -1717755698124609685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 57x57 Character Sheet_Recolor_41
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 0
+        width: 57
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f36db1c08f437c20800000000000000
+      internalID: 3202991174415377397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -62,6 +62,16 @@ public class Interaction : MonoBehaviour
 
     IEnumerator Opening()
     {
+        // Face player if not doing so already...
+
+        if (m_playerBehavior.gameObject.transform.position.x <
+            m_npcBehavior.gameObject.transform.position.x)
+        {
+            var scale = m_npcBehavior.gameObject.transform.localScale;
+            scale.x *= -1f;
+            m_npcBehavior.gameObject.transform.localScale = scale;
+        }
+
         m_npcBalloon.Stop();
         yield return new WaitForSecondsRealtime(m_timeToClose);
         m_npcBalloon.Speak(RandomString(m_npcBehavior.openingLine));
@@ -148,6 +158,7 @@ public class Interaction : MonoBehaviour
         // Success formula: Take base success chance for this action
         // and subtract 50% times current zombifcation ratio
         // (calculated by taking 100% - current humanity ratio)
+        // (NOTE: The penalty becomes a bonus for intimidation attempts!)
 
         // NOTE: Bites are always 100% successful for now
 
@@ -162,8 +173,13 @@ public class Interaction : MonoBehaviour
         float successChance = baseSuccessChance;
 
         if (action != InteractionMenuLogic.InteractionIcon.Bite)
-            successChance -= 
-                (1f - m_playerBehavior.GetCurrentHumanityRatio()) / 2f;
+        {
+            float modifier = (1f - m_playerBehavior.GetCurrentHumanityRatio()) / 2f;
+            if (action == InteractionMenuLogic.InteractionIcon.Intimidate)
+                successChance += modifier;
+            else 
+                successChance -= modifier;
+        }
 
         bool success = Random.Range(0f, 1f) <= successChance;
 
@@ -249,12 +265,7 @@ public class Interaction : MonoBehaviour
                 m_npcBalloon.Stop();
                 yield return new WaitForSecondsRealtime(m_timeToClose);
 
-                for (int i = 0; i < m_npcBehavior.guardsToAlert.Length; ++i)
-                {
-                    m_npcBehavior.guardsToAlert[i].GetComponentInChildren<GuardBehavior>()
-                        .State = GuardBehavior.GuardState.Panic;
-                }
-
+                m_npcBehavior.State = OfficeWorkerBehavior.OfficeWorkerState.Panic;
                 CompleteInteraction();
                 break;
             }
@@ -297,8 +308,7 @@ public class Interaction : MonoBehaviour
         m_player.GetComponentInChildren<SoundPing>().gameObject.
             GetComponent<SpriteRenderer>().enabled = true;
 
-        m_npc.transform.GetChild(2).GetComponent<CapsuleCollider2D>()
-               .enabled = false;
+        m_npcBehavior.Interacted = true;
 
         GameManager.instance.Unpause();
 
