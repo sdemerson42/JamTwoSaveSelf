@@ -62,6 +62,16 @@ public class Interaction : MonoBehaviour
 
     IEnumerator Opening()
     {
+        // Face player if not doing so already...
+
+        if (m_playerBehavior.gameObject.transform.position.x <
+            m_npcBehavior.gameObject.transform.position.x)
+        {
+            var scale = m_npcBehavior.gameObject.transform.localScale;
+            scale.x *= -1f;
+            m_npcBehavior.gameObject.transform.localScale = scale;
+        }
+
         m_npcBalloon.Stop();
         yield return new WaitForSecondsRealtime(m_timeToClose);
         m_npcBalloon.Speak(RandomString(m_npcBehavior.openingLine));
@@ -255,6 +265,7 @@ public class Interaction : MonoBehaviour
                         .State = GuardBehavior.GuardState.Panic;
                 }
 
+                m_npcBehavior.State = OfficeWorkerBehavior.OfficeWorkerState.Panic;
                 CompleteInteraction();
                 break;
             }
@@ -297,8 +308,8 @@ public class Interaction : MonoBehaviour
         m_player.GetComponentInChildren<SoundPing>().gameObject.
             GetComponent<SpriteRenderer>().enabled = true;
 
-        m_npc.transform.GetChild(2).GetComponent<CapsuleCollider2D>()
-               .enabled = false;
+        m_npc.transform.GetChild(2).gameObject
+               .SetActive(false);
 
         GameManager.instance.Unpause();
 
