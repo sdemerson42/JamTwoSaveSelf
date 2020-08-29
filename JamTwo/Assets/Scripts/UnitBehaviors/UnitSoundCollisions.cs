@@ -38,12 +38,16 @@ public class UnitSoundCollisions : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            var interaction = transform.parent.
-                GetComponentInChildren<OfficeWorkerBehavior>().interaction;
+            var behavior = transform.parent.
+                GetComponentInChildren<OfficeWorkerBehavior>();
+            if (behavior.Interacted) return;
+
+            var interaction = behavior.interaction;
             var instance = Instantiate(interaction, transform.position, Quaternion.identity);
             instance.GetComponent<Interaction>().Initialize(
                 collision.transform.parent.gameObject, transform.parent.gameObject);
             GameManager.instance.Pause();
         }
+
     }
 }

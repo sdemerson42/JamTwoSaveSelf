@@ -28,6 +28,13 @@ public class OfficeWorkerBehavior : MonoBehaviour
     public string[] charmPCLine;
     public string[] charmWinLine;
     public string[] charmLoseLine;
+    
+    bool m_interactionCompleted = false;
+    public bool Interacted
+    {
+        get => m_interactionCompleted;
+        set => m_interactionCompleted = value;
+    }
 
     int m_panicPointId;
     const float m_turningDistance = .1f;
@@ -62,6 +69,15 @@ public class OfficeWorkerBehavior : MonoBehaviour
                     transform.parent.GetChild(2).gameObject
                         .SetActive(false);
                     GetComponent<Animator>().SetTrigger("isRunning");
+
+                    // Alert all listening guards
+
+                    for (int i = 0; i < guardsToAlert.Length; ++i)
+                    {
+                        guardsToAlert[i].GetComponentInChildren<GuardBehavior>()
+                            .State = GuardBehavior.GuardState.Panic;
+                    }
+
                     StartCoroutine(Panic());
                 }
             }
