@@ -58,6 +58,12 @@ public class PlayerBehavior : MonoBehaviour
             yield return new WaitForSeconds(1f);
             m_humanity = Mathf.Max(0f, m_humanity - humanityLossRate);
 
+            if (m_humanity == 0f)
+            {
+                // END GAME!
+                GameManager.instance.LoseGame("You have completely zombified!");
+            }
+
             float humanityRatio = m_humanity / startingHumanity;
             Color color = new Color(humanityRatio, 1f, humanityRatio);
             m_spriteRenderer.color = color;

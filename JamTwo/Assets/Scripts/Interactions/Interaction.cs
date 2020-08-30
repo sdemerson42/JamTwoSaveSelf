@@ -6,6 +6,7 @@ using UnityEngine;
 public class Interaction : MonoBehaviour
 {
     public float conversationWaitTime;
+    public GameObject bloodBurst;
 
     GameObject m_player;
     GameObject m_npc;
@@ -294,6 +295,7 @@ public class Interaction : MonoBehaviour
     {
         var position = m_npc.transform.position;
         var zombie = m_npcBehavior.zombieForm;
+        Instantiate(bloodBurst, position, Quaternion.identity);
         Instantiate(zombie, position, Quaternion.identity);
         Destroy(m_npc);
     }

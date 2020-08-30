@@ -14,6 +14,18 @@ public class UnitSoundCollisions : MonoBehaviour
             case "OfficeWorker":
                 OfficeWorkerLogic(collision);
                 break;
+            case "PlayerNoise":
+                PlayerLogic(collision);
+                break;
+        }
+    }
+
+    private void PlayerLogic(Collider2D collision)
+    {
+        if (collision.tag == "Guard")
+        {
+            var guardBehavior = collision.gameObject.GetComponent<GuardBehavior>();
+            guardBehavior.LookAtNoise(gameObject);
         }
     }
 

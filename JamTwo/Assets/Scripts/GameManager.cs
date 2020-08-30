@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Standard GameManager-type script that will assist in coordinating
@@ -21,6 +24,9 @@ public class GameManager : MonoBehaviour
 
     public List<Waypoint> waypoints = new List<Waypoint>();
 
+    public Text loseText;
+    public Light2D globalLight;
+
     public static GameManager instance;
     GameObject m_player;
 
@@ -31,6 +37,14 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
 
         m_player = GameObject.Find("Player");
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void Pause()
@@ -66,6 +80,27 @@ public class GameManager : MonoBehaviour
     {
         var result = waypoints.Find(x => x.id == id);
         return result.transform.position;
+    }
+
+    public void LoseGame(string msg)
+    {
+        loseText.text = msg;
+        Pause();
+        StartCoroutine(FadeAndRestart());
+    }
+
+    IEnumerator FadeAndRestart()
+    {
+        while(true)
+        {
+            globalLight.intensity -= .003f;
+            if (globalLight.intensity <= 0f)
+            {
+                Unpause();
+                SceneManager.LoadSceneAsync("Main");
+            }
+            yield return true;
+        }
     }
 
 }

@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19dd8d228f5a2b34ab8446ece2238d11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  conversationWaitTime: 0
+  bloodBurst: {fileID: 7472169739927082350, guid: e83d5309c81f30943a813093d3ab535d, type: 3}

@@ -132,6 +132,11 @@ public class GuardBehavior : MonoBehaviour
             return;
         }
 
+        if (noise.tag == "PlayerNoise")
+        {
+            GameManager.instance.LoseGame("You're under arrest, you undead jerk!");
+        }
+
     }
 
     IEnumerator Panic()
